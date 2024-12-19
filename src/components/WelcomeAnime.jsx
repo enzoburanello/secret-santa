@@ -1,5 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import BigBlue from "./src/assets/big-blue.png"
+import BigRed from "./src/assets/big-red.png"
+import SmallBlue from "./src/assets/small-blue.png"
+import CandyCan from "./src/assets/candy-can.png"
+import SmallRed from "./src/assets/small-red.png"
+import PereNoel from "./src/assets/pere-noel-1.png"
+
 
  export const WelcomeAnime = () => {
   const imageVariants = {
@@ -19,7 +26,7 @@ import { motion } from 'framer-motion';
       className='relative z-99 group-first:'
     >
       <img 
-        src="./src/assets/pere-noel-1.png" 
+        src={PereNoel} 
         alt="Example" 
       />
     </motion.div>
@@ -29,32 +36,32 @@ import { motion } from 'framer-motion';
     animate={{ opacity: 1, top: -70, left: 250, scale:1   }}
     transition={{ duration: 0.6, delay: 0.8 }}
     className='absolute'
-    src="./src/assets/big-blue.png" alt="" />
+    src={BigBlue} alt="" />
     <motion.img
     initial={{ opacity: 0, top: 80, left: 80, scale:.5 }}
     animate={{ opacity: 1, top: 0, left: -100, scale:1   }}
     transition={{ duration: 0.6, delay: 0.8 }}
     className='absolute '
-    src="./src/assets/big-red.png" alt="" />
+    src={BigRed} alt="" />
 
     <motion.img
        initial={{ opacity: 0, top: 80, left: 80, scale:.5 }}
        animate={{ opacity: 1, top: 190, left: -60, scale:1   }}
        transition={{ duration: 0.6, delay: 0.8 }}
     className='absolute '
-    src="./src/assets/small-blue.png" alt="" />
+    src={SmallBlue} alt="" />
     <motion.img
       initial={{ opacity: 0, top: 80, left: 80, scale:.5 }}
       animate={{ opacity: 1, top: -80, left: 100, scale:1   }}
       transition={{ duration: 0.6, delay: 0.8 }}
     className='absolute '
-    src="./src/assets/candy-can.png" alt="" />
+    src={CandyCan} alt="" />
     <motion.img
        initial={{ opacity: 0, top: 80, left: 80, scale:.5 }}
        animate={{ opacity: 1, top: 190, left: 290, scale:1   }}
        transition={{ duration: 0.6, delay: 0.8 }}
     className='absolute '
-    src="./src/assets/small-red.png" alt="" />
+    src={SmallRed} alt="" />
 
 
 
