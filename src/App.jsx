@@ -2,6 +2,9 @@ import { useState } from "react";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { ParticipantInput } from "./components/ParticipantInput";
 import { AssignmentDisplay } from "./components/AssignmentDisplay";
+import { Button } from "./components/Button";
+import { CardName } from "./components/CardName";
+import "./index.css"; // Importation du fichier CSS principal
 
 export default function App() {
   // Tableau des participants
@@ -51,31 +54,80 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <main className="w-sreen h-screen bg-[#DCF1E6]">
+       <div className="relative flex w-[375px] h-[812px] mx-auto p-4 overflow-hidden bg-white rounded-2xl justify-center px-5 py-10 shadow">
       <div>
-        // affiche l'écran en fonction de l'état de l'application // WELCOME
+        {/* affiche l'écran en fonction de l'état de l'application // WELCOME */}
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
-        // INPUT
+        {/* // INPUT */}
         {currentScreen === "input" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
-              Ajoutez les participants
-            </h2>
-            <ParticipantInput
-              onAddParticipant={addParticipant}
-              participants={participants}
-              onRemoveParticipant={removeParticipant}
-            />
-            <div className="mt-6">
-              <button className="button w-full" onClick={distributeGifts}>
+            <div className="flex flex-col relative gap-20 items-center  h-full w-[375px] ">
+
+              <div className="flex flex-col gap-10 justify-center items-center">
+                  <h2 className="text-5xl font-bold text-center">
+                  Secret Santa is coming!{" "}
+                </h2>
+
+
+                  <div className=" relative w-[6rem] h-[8.5rem] flex flex-col gap-4 rounded-lg bg-green-100 justify-center items-center">
+                <h3 className="font-bold text-6xl text-green-800">
+                  25
+                </h3>
+                <p className="font-bold text-lg text-green-800">
+                  dec
+                </p>
+              </div>
+              </div>
+
+
+
+              <img
+              className="absolute top-20 -left-20"
+              src="./src/assets/socks.png" alt="" />
+
+              <img
+                 className="absolute top-10 left-60"
+              src="./src/assets/candy-can.png" alt="" />
+
+              <img
+              className="absolute top-40 left-65"
+              src="./src/assets/small-blue.png" alt="" />
+
+
+
+
+              <div className="h-full flex flex-col justify-between">
+                <div className="flex flex-col gap-4 justify-center items-center">
+              <h3 className="text-xl font-bold text-start">Create your santa’s team : </h3>
+                
+                <ParticipantInput
+                onAddParticipant={addParticipant}
+                participants={participants}
+                onRemoveParticipant={removeParticipant}
+              />
+              </div>
+            
+
+
+              <div className="mt-6">
+                <Button link={distributeGifts} text="Distribuer les cadeaux" />
+                {/* <button className="button w-full" onClick={distributeGifts}>
                 Distribuer les cadeaux
-              </button>
+              </button> */}
+              </div>
+              </div>
+
+              
+            
+            
+            
             </div>
           </>
         )}
-        // ASSIGNMENTS
+        {/* // ASSIGNMENTS */}
         {currentScreen === "assignments" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
@@ -91,5 +143,7 @@ export default function App() {
         )}
       </div>
     </div>
+    </main>
+   
   );
 }
