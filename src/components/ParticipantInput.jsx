@@ -25,7 +25,7 @@ export function ParticipantInput({
   return (
     <div className="space-y-4">
       {/* // Champs de saisie pour ajouter un participant */}
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 overflow-hidden">
         <input
           type="text"
           className="input flex-grow bg-gray-100 rounded-xl w-[16rem] h-[3rem] justify-start items-center p-6 py-8 font-bold text-sm"
@@ -39,7 +39,7 @@ export function ParticipantInput({
         </button> */}
       </div>
       {/* // Liste des participants ajoutés */}
-      <ul className="space-y-2">
+      <ul className="space-y-2 overflow-scroll  w-[16rem] h-[12rem]  ">
         {participants.map((name, index) => (
           <li key={index} className=" w-64 h-16 flex flex-row justify-between items-center p-4 shadow-lg rounded-lg">
 

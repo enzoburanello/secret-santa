@@ -6,7 +6,7 @@ export function CardName({add, name, remove}) {
             <h2 className="text-sm ">{name}</h2>
         </div>
         
-        <button on>
+        <button >
             <img className="w-[48px] h-[48px]" src="./assets/trash.png" alt="" />
         </button>
        </section>

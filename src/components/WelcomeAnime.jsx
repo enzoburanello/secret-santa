@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import BigBlue from "./src/assets/big-blue.png"
-import BigRed from "./src/assets/big-red.png"
-import SmallBlue from "./src/assets/small-blue.png"
-import CandyCan from "./src/assets/candy-can.png"
-import SmallRed from "./src/assets/small-red.png"
-import PereNoel from "./src/assets/pere-noel-1.png"
+import BigBlue from "../assets/big-blue.png"
+import BigRed from "../assets/big-red.png"
+import SmallBlue from "../assets/small-blue.png"
+import CandyCan from "../assets/candy-can.png"
+import SmallRed from "../assets/small-red.png"
+import PereNoel from "../assets/pere-noel-1.png"
 
 
  export const WelcomeAnime = () => {

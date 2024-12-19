@@ -4,11 +4,16 @@ import {Button} from"./Button"
 import {WelcomeAnime} from './WelcomeAnime';
 import {TitleAnime} from './TitleAnime';
 import {SubAnime} from './SubAnime';
+import { motion } from 'framer-motion';
 
 
 export function WelcomeScreen({ onStart }) {
   return (
-    <div className="flex flex-col justify-between items-center text-center space-y-6 w-sm h-[50.75rem] overflow-hidden px-5">
+    <motion.div 
+    exit={{ opacity: 0, scale: 1.1 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+    className="flex flex-col justify-between items-center text-center space-y-6 w-sm h-[50.75rem] overflow-hidden px-5">
       <div>
         <div>
           <WelcomeAnime client:load/>
@@ -22,6 +27,6 @@ export function WelcomeScreen({ onStart }) {
     <Button link={onStart} text="Join the Santa team"/>
 
     <img src="./src/assets/start.svg" alt="" />
-    </div>
+    </motion.div>
   );
 }
